@@ -1,24 +1,22 @@
-# README
+# Dry beans
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requerimientos
 
-Things you may want to cover:
+- Rails: 7.1.3.2
+- Ruby: 3.0.0
 
-* Ruby version
+## Instalación
 
-* System dependencies
+La instalación de gemas necesarias es necesario la ejecución del siguiente comando
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+Para la creación de base de datos y la generación de algunos datos para esta se realiza a través de los siguientes comandos. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
