@@ -38,6 +38,7 @@ class TripsController < ApplicationController
     @trip.destroy!
   end
 
+  # POST /trips/:id/delivery
   def create_delivery
     @delivery = @trip.deliveries.new(delivery_params)
 

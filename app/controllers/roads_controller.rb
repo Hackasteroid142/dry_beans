@@ -38,9 +38,8 @@ class RoadsController < ApplicationController
     @road.destroy!
   end
 
+  # GET /roads/:id/details
   def road_with_details
-    puts @road.inspect
-    puts "###############"
     render json: Road.with_details(@road)
   end
 
