@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :trips
   resources :roads
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get "/roads/:id/details", to: "roads#road_with_details"
+  get "/roads/:id/details", to: "roads#road_with_details", as: :road_with_details
 
   post "/trips/:id/delivery", to: "trips#create_delivery", as: :create_delivery
 
