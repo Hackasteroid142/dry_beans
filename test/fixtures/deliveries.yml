@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  direction: MyString
+  status: MyString
+  code: MyString
+  description: MyString
+  product_name: MyString
+  delivered_at: MyString
+  trip: one
+
+two:
+  direction: MyString
+  status: MyString
+  code: MyString
+  description: MyString
+  product_name: MyString
+  delivered_at: MyString
+  trip: two
