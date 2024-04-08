@@ -1,5 +1,5 @@
 class RoadsController < ApplicationController
-  before_action :set_road, only: %i[ show update destroy ]
+  before_action :set_road, only: %i[ show update destroy road_with_details]
 
   # GET /roads
   def index
@@ -38,10 +38,16 @@ class RoadsController < ApplicationController
     @road.destroy!
   end
 
+  def road_with_details
+    puts @road.inspect
+    puts "###############"
+    render json: Road.with_details(@road)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_road
-      @road = Road.find(params[:id])
+      @road = Road.includes(:trips).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
